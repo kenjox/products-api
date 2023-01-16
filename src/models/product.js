@@ -14,6 +14,17 @@ const productsSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    rating: {
+      type: Number,
+      default: 1.5,
+    },
+    company: {
+      type: String,
+      enum: {
+        values: ['apple', 'microsoft', 'aws'],
+        message: '{VALUE} is not supported',
+      },
+    },
   },
   { timestamps: true }
 );
