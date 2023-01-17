@@ -2,6 +2,8 @@ import asyncWrapper from '../middlewares/async-wrapper.js';
 import Product from '../models/product.js';
 
 const all = async (req, res, next) => {
+  // TODO: get user from db and check the role
+
   const { name, price, featured, rating, company, sort, fields } = req.query;
 
   const queryObj = {};

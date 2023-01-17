@@ -1,2 +1,17 @@
+
+### Login
+POST http://localhost:6000/api/v1/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "doe"
+}
+
+
 ### GET all products
-GET http://localhost:6000/api/v1/products?limit=3
+GET http://localhost:6000/api/v1/products
+Content-Type: application/json
+Authorization: Bearer xxx-xxx-xxx-xxx-xxx
+
+

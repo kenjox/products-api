@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 
 import connectToDB from './db/connect.js';
+import loginRoute from './routes/login.js';
 import productsRoutes from './routes/products.js';
 import notFoundMiddleware from './middlewares/not-found.js';
 import errorHandlerMiddleware from './middlewares/error-handler.js';
@@ -12,6 +13,7 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
+app.use('/api/v1/login', loginRoute);
 app.use('/api/v1/products', productsRoutes);
 
 app.use(notFoundMiddleware);
